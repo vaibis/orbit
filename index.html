@@ -521,8 +521,8 @@
     document.title = state === 'running' ? `${fmt(remainingMs)} · Orbit` : 'Orbit — Study Timer';
 
     document.body.classList.toggle('running', state === 'running');
-    el.status.textContent = { idle: 'Ready', running: 'Focusing', paused: 'Paused' }[state];
-    el.start.textContent = state === 'running' ? 'Pause' : state === 'paused' ? 'Resume' : 'Start';
+    el.status.textContent = { idle: 'Ready', running: 'focusing', paused: 'paused' }[state];
+    el.start.textContent = state === 'running' ? 'pause' : state === 'paused' ? 'resume' : 'start';
     el.reset.hidden = state === 'idle';
     el.end.hidden = state === 'idle';
     el.presets.querySelectorAll('.chip').forEach(c => c.disabled = state !== 'idle');
